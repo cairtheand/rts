@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RowanTree Security & Privacy</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #F9FAFB;
+            color: #2D2D2D;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        header {
+            background: #2B6777;
+            color: white;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        .about, .services, .contact {
+            max-width: 900px;
+            margin: 2rem auto;
+            text-align: left;
+        }
+
+        h2 {
+            color: #2B6777;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            color: white;
+            background: #52AB98;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #3D8B80;
+        }
+
+        .services ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .services li::before {
+            content: '\2713';
+            color: #52AB98;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding: 1rem;
+            background: #2B6777;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Safe Haven Cybersecurity</h1>
+        <p>Protecting People Who Protect Others</p>
+    </header>
+
+    <div class="container">
+
+        <section class="about">
+            <h2>About Us</h2>
+            <p>RowanTree provides accessible, compassionate cybersecurity services to those making the world a better place. Whether you are a nonprofit, an activist, a healthcare provider, or someone facing a personal digital threat, we are here to protect and empower you.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </section>
+
+        <section class="services">
+            <h2>Services</h2>
+            <ul>
+                <li>Privacy and security education tailored for at-risk communities</li>
+                <li>Preventative cybersecurity consulting for nonprofits and volunteer groups</li>
+                <li>Crisis response for individuals facing harassment, doxxing, or stalking</li>
+                <li>Secure communication setup and digital hygiene training</li>
+                <li>Personalized security and privacy assessments</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Need help or want to learn more? Reach out today.</p>
+            <p><a href="mailto:hello@rowantreesecurity.com">hello@rowantreesecurity.com</a></p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 RowanTree Security and Privacy.</p>
+    </footer>
+</body>
+
+</html>
