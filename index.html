@@ -31,6 +31,11 @@
             margin: 3rem, 0;
         }
 
+        .mobile-break {
+            display: none;
+        }
+
+        
         header p {
             font-size: 1.2rem;
             margin-top: 4rem;
@@ -114,13 +119,17 @@
                 padding: 0.8rem 1.5rem;
                 font-size: 1rem;
             }
+
+             .mobile-break {
+                display: inline;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>RowanTree Security <wbr>and Privacy</h1>
+        <h1>RowanTree Security <span class="mobile-break"> </span>and Privacy</h1>
 <!--         <p>Protecting People Who Protect Others</p> -->
         <div class="header-container-flex">
             <p class="header-p">RowanTree provides accessible, compassionate cybersecurity and privacy services to those making the world a better place. Whether you are a nonprofit, an activist, a healthcare provider, or someone facing a personal digital threat, we are here to protect and empower you.</p>
