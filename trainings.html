@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RowanTree Security & Privacy</title>
+    <style>
+        body {
+            margin: 0;
+/*             font-family: 'Arial', sans-serif; */
+            font-family: 'Trebuchet', sans-serif;
+            background: #F9FAFB;
+            color: #2D2D2D;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        header {
+              background-color: #F9FAFB; 
+              background-image: linear-gradient(#2db7bc, #196b56);
+/*             background: #18a592; */
+/*             background: #2B6777; */
+                color: white;
+/*             padding: 2rem 1rem; */
+                /* padding: 5em 1em; */
+                padding: 0em 1em 5em;
+
+            }
+
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 4em, 0;
+        }
+
+        .mobile-break {
+            display: none;
+        }
+
+
+        .header-container-flex{
+            display:flex;
+            justify-content: center;
+            /* align-items: flex-start; */
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        .schedule, .contact, .left-box {
+            max-width: 900px;
+            margin: 2rem auto;
+            text-align: left;
+        }
+
+        .center-box{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+       .left-box {
+            max-width: 900px;
+            margin: 0rem auto 2rem auto;
+            text-align: left;
+        }
+
+        h2, h3 {
+/*             color: #2B6777; */
+            color: #18a592;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            margin-bottom: 0rem;
+        }
+
+        section p {
+            max-width: 900px;
+            /* text-align: center; */
+
+        }
+
+
+
+        #button-sign-up, #button-book{
+            color: white;
+            font-size: medium;
+            background-color: teal;
+            border: 1px solid rgb(6, 87, 70);
+            border-radius: 15px;
+            padding:5px 15px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        #button-sign-up:hover {
+            background: #44c0c2;
+        }
+
+        #button-book:hover {
+            background: #44c0c2;
+        }
+
+        a:link { 
+            text-decoration: none; 
+            color: rgb(6, 75, 75);
+        } 
+
+        #hello{
+            margin-top: 0;
+        }
+
+        #button-coffee{
+            color: black;
+            background-color: gold;
+            border: 1px solid goldenrod;
+            border-radius: 15px;
+            padding:5px 10px;
+            margin-bottom: 30px;
+        }
+
+        #button-coffee:hover{
+            background-color: rgb(249, 201, 80);
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding: 1rem;
+/*             background: #2B6777; */
+            background-color: #F9FAFB; 
+            background-image: linear-gradient(#196b56, #2db7bc);
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+
+             .mobile-break {
+                display: inline;
+            }
+        }
+
+        /* Nav here */
+
+nav {
+      padding: 1rem;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 3px;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .menu li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: block;
+    }
+
+    .menu li a:hover {
+      background: #2db7bc;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        /* background: #18b1a0; */
+        background: teal;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        /* max-width: 300px; */
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .menu-toggle:checked ~ .menu {
+        max-height: 500px;
+      }
+
+      .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+      }
+
+      .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            </label>
+            <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html">Book a Consult</a></li>
+            <li><a href="trainings.html">Trainings</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <h1>RowanTree Security <span class="mobile-break"> </span>and Privacy</h1>
+
+    </header>
+
+    <div class="container">
+       
+        <section id="trainings" class="trainings">
+            <h2>Personalized Trainings</h2>
+            <div class="center-box">
+
+                <p>RowanTree offers interactive workshops and training sessions designed around the unique needs of your organization. We take the time to understand your priorities and challenges, then tailor sessions to fit your mission and your people. Participants walk away empowered with practical skills and strategies to improve digital security.</p>
+                
+            </div>
+
+
+            <h3>Past trainings include:</h3>
+
+            <div class="center-box">
+                <div class="left-box">    
+                    <ul id="training-list"></ul>            
+                        <li>Digital Security for Traveling Gender-Affirming Care Providers</li>
+                        <li>Social Media Safety for Nonprofits</li>
+                        <li>Doxxing Prevention for Therapists</li>
+                        <li>Signal 101 and 102</li>
+                        <li>What To Do About Mercenary Spyware</li>
+                        <li>Keys to Security: Password Managers & MFA Made Simple</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="mailto:hello@rowantreesecurity.com">
+            <button id="button-book">Book a training</button>    
+            </a>
+
+            <h2>Community Trainings</h2>
+
+            <div class="center-box">
+                <p>Community trainings and office hours are free and open to the public.</p>
+                <p>Sign up to recieve occasional emails about upcoming community trainings here:</p>            
+            
+            </div>
+
+
+            <a target="_blank" href="https://go.rowantreesecurity.com/trainings-web"></a>
+                <button id="button-sign-up">Sign up</button>
+            </a>
+            
+            
+
+
+            <h3>Want to learn more?</h3>
+            <div class="center-box">
+                <p> Get in touch at:</p>
+                <p id="hello"><a href="mailto:hello@rowantreesecurity.com">hello@rowantreesecurity.com</a></p>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Support Digital Security as Community Care:</p>
+        <a  href="https://buymeacoffee.com/rowantree">
+            <button id="button-coffee">Buy Me a Coffee ☕</button>
+        </a>
+        <br>
+        <p>&copy; 2025 RowanTree Security and Privacy</p>
+    </footer>
+</body>
+
+</html>
