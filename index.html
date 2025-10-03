@@ -69,7 +69,7 @@
             color: #18a592;
         }
 
-        .cta-button {
+        /* .cta-button {
             display: inline-block;
             margin-top: 1.5rem;
             padding: 1rem 2rem;
@@ -83,7 +83,15 @@
 
         .cta-button:hover {
             background: #3D8B80;
+        } */
+
+        .center-box{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
+
 
         .services {
             margin-left: 5em;
@@ -109,6 +117,10 @@
             font-weight: bold;
             }
 
+        .services a:visited{
+            color: black;
+        }
+
         #button-learn-more{
             color: white;
             font-size: medium;
@@ -118,7 +130,9 @@
             padding:5px 15px;
             margin-top: 20px;
             margin-bottom: 30px;
+            /* margin-left: 30px; */
         }
+
 
         a:link { 
             text-decoration: none; 
@@ -284,24 +298,41 @@ nav {
 <!--             <a href="#contact" class="cta-button">Get in Touch</a> -->
         </section>
 
-        <section class="services" id="services">
-            <h2>Services</h2>
+        <h2>Services</h2>
+        <div class="center-box">
+                    <section class="services" id="services">
+            
             <ul>
-                <li class="li-check">Privacy and security education tailored for at-risk professionals and communities</li>
-                <li class="li-check">Preventative cybersecurity consulting for nonprofits and volunteer groups</li>
-                <li class="li-check">Crisis response for individuals facing harassment, doxxing, or stalking</li>
+                <li class="li-check">
+                    <a href="trainings.html">Privacy and security education tailored for at-risk professionals and communities</a> 
+                </li>
+                <li class="li-check">
+                    <a href="schedule.html">Preventative cybersecurity consulting for nonprofits and volunteer groups</a>
+                </li>
+                <li class="li-check">
+                    <a href="contact.html">Crisis response for individuals facing harassment, doxxing, or stalking</a>
+                </li>
                 <li class="li-check">Online data removal</li>
                 <li class="li-check">Secure communication setup and onboarding</li>
-                <li class="li-check">Platform-specific optimization, troubleshooting and guidance</li>
+                <li class="li-check">
+                    <a href="schedule.html">Platform-specific guidance, optimization, troubleshooting</a>
+                </li>
                 <li class="li-check">Digital security guide authoring and editing</li>
-                <li class="li-check">Personalized security and privacy assessments</li>
+                <li class="li-check">
+                    <a href="schedule.html">Personalized security and privacy assessments</a>        
+                </li>
             </ul>
             <br>
-            <a target="_blank" href="https://go.rowantreesecurity.com/services-website">
-                <button id="button-learn-more">Learn More</button>
-            </a>
+
             
         </section>
+
+                    <a target="_blank" href="https://go.rowantreesecurity.com/services-website">
+                <button id="button-learn-more">Learn More</button>
+            </a>
+
+        </div>
+
 
 
 
