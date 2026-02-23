@@ -1,0 +1,486 @@
+/* =====================
+   Base / Global Styles
+   ===================== */
+
+body {
+    margin: 0;
+    font-family: 'Trebuchet', sans-serif;
+    background: #F9FAFB;
+    color: #2D2D2D;
+    line-height: 1.8;
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(6, 75, 75);
+}
+
+h2 {
+    color: #18a592;
+}
+
+
+/* =====================
+   Navbar (white, above hero)
+   ===================== */
+
+nav {
+    background: white;
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    /* position: relative; */
+    position: sticky;  
+    top: 0; 
+    z-index: 10;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    color: #196b56;
+    font-size: 1rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+    
+
+
+.menu li a {
+    color: #196b56;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    display: block;
+    font-size: 0.95rem;
+    background-color: white;
+    max-width: 200px;
+}
+
+.menu li a:hover {
+    /* color: #084637; */
+    color: teal;
+    font-weight: 600;
+    /* background-color: rgb(239, 244, 239); */
+}
+
+
+
+/* Current selection */
+.menu li a.active {
+    color: #196b56;
+    /* text-decoration: underline; */
+    /* font-weight: 600; */
+    /* border-bottom: 2px solid #196b56; */
+}
+
+
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #196b56;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+
+#rowan-leaf{
+    width: 15px;
+}
+
+
+
+/* =====================
+   Header / Hero (gradient, no nav inside)
+   ===================== */
+
+.header-container-flex {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: #196b56;
+    background-image: linear-gradient(135deg, #2db7bc, #196b56);
+    color: white;
+    padding: 5em 1em 8em;   /* extra bottom padding for wave overlap */
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin: 0 0 1rem 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+    max-width: 900px;
+}
+
+/* Wavy bottom edge */
+.wave-bottom {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+}
+
+.wave-bottom svg {
+    display: block;
+    width: 100%;
+}
+
+
+/* =====================
+   Layout
+   ===================== */
+
+.container {
+    padding: 2rem;
+}
+
+.schedule,
+.contact {
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: left;
+}
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul li::marker {
+    color: #18a592;
+}
+
+/* =====================
+   Footer
+   ===================== */
+
+/* footer {
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: #F9FAFB;
+    background-image: linear-gradient(#196b56, #2db7bc);
+    color: white;
+} */
+
+footer {
+    margin-top: 0;          /* remove top margin — wave handles the spacing */
+    padding: 3rem 1rem 1rem;
+    background-color: #2db7bc;
+    background-image: linear-gradient(#196b56, #2db7bc);  /* dark top → light bottom */
+    color: white;
+    position: relative;
+}
+
+.wave-top {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+}
+
+.wave-top svg {
+    display: block;
+    width: 100%;
+}
+
+/* =====================
+   Buttons
+   ===================== */
+
+#button-coffee {
+    color: black;
+    background-color: gold;
+    border: 1px solid goldenrod;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin-bottom: 30px;
+}
+
+#button-coffee:hover {
+    background-color: rgb(249, 201, 80);
+}
+
+.button-learn-more,
+#button-book,
+#button-sign-up
+ {
+    color: white;
+    font-size: medium;
+    background-color: teal;
+    border: 0px solid rgb(6, 87, 70);
+    border-radius: 15px;
+    padding: 5px 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.button-learn-more:hover,
+#button-book:hover,
+#button-sign-up:hover {
+    background: #44c0c2;
+}
+
+#button-book
+ {
+    color: white;
+    /* font-size: medium; */
+    background-color: teal;
+    border: 1px solid rgb(6, 87, 70);
+    border-radius: 25px;
+    padding: 3px 12px;
+    /* margin-top: 20px; */
+    /* margin-bottom: 30px; */
+}
+
+#button-book:hover {
+    /* color: #084637; */
+    color: white;
+    font-weight: 400;
+}
+
+/* =====================
+   index.html — Services
+   ===================== */
+
+.services {
+    margin-left: 2em;
+    text-align: left;
+}
+
+.services ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.services li {
+    padding-left: 1.5em;
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+.services li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #18a592;
+    font-weight: bold;
+}
+
+.services a:visited {
+    color: black;
+}
+
+#who-we-serve{
+    max-width: 800px;
+}
+
+#who-we-serve ul{
+max-width: 610px;
+}
+
+#who-we-serve li{
+    padding-left: .5em;
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+
+/* =====================
+   trainings.html
+   ===================== */
+
+.schedule,
+.contact,
+.left-box {
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.left-box {
+    max-width: 900px;
+    margin: 0rem auto 2rem auto;
+    text-align: left;
+}
+
+h3 {
+    color: #18a592;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+section p {
+    max-width: 900px;
+}
+
+#hello {
+    margin-top: 0;
+}
+
+
+/* =====================
+   Contact
+   ===================== */
+#protonmail-icon{
+    width: 30px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.hide{
+    /* display: none; */
+    position: absolute;
+    top: 75%;      
+    /* left: 10; */
+    visibility: hidden;
+}
+
+.protonmail-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.protonmail-wrapper:hover .hide {
+    /* display: block; */
+    visibility: visible;
+    background-color: rgb(228, 219, 240);
+    font-size: 12px;
+    width: 320px;
+}
+
+.email{
+    vertical-align: middle;
+} 
+
+.small{
+    font-size: x-small;
+}
+
+/* =====================
+   Schedule / Bookings
+   ===================== */
+
+#book-box{
+        background-color: #eaf5f4;
+    /* color: white; */
+    color: darkcyan;
+    max-width: 750px;
+    border: 2px solid darkcyan;
+    border-radius: 25px;
+    padding: 0px 35px 10px 30px;
+    margin-bottom: 3em;
+}
+
+/* #consult-about{
+    background-color: #eaf5f4;
+    /* color: white; 
+    color: darkcyan;
+    max-width: 650px;
+    border: 2px solid darkcyan;
+    border-radius: 25px;
+    padding: 50px;
+} */
+
+/* =====================
+   Responsive
+   ===================== */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .mobile-break {
+        display: inline;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        max-width: 200px;
+    }
+
+    .menu li a:hover {
+        background: whitesmoke;
+    }
+
+    .menu li a.active {
+    color: #196b56;
+    text-decoration: underline;
+    /* font-weight: 600; */
+    /* border-bottom: 2px solid #196b56; */
+    }
+
+    .menu-toggle:checked ~ .menu {
+        max-height: 500px;
+    }
+
+    .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
