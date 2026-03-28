@@ -304,8 +304,12 @@ footer {
     font-weight: bold;
 }
 
-.services a:visited {
-    color: black;
+.services a,
+.services a:visited,
+#how-we-do a,
+#how-we-do a:visited
+ {
+    color: rgb(15, 85, 85);
 }
 
 #who-we-serve{
@@ -355,6 +359,114 @@ section p {
     margin-top: 0;
 }
 
+
+/* =====================
+   library.html
+   ===================== */
+
+.resource-card{
+    border-radius: 12px;        
+    padding: 0px 20px 30px 20px;   
+    background-color: #fff;     
+    box-shadow: 0 2px 8px rgba(71, 144, 133, 0.1);  
+    max-width: 250px;           
+}
+
+.card-img{
+    width: 245px;
+    border-radius: 12px;
+    margin-top: 20px; 
+}
+
+.spacer{
+    height: 100px;
+}
+
+
+/* =====================
+    Resource
+   why-proton.html
+   ===================== */
+
+.resource{
+    /* max-width: 800px; */
+    text-align: left;
+    margin: auto 15%;
+}
+
+.resource h2,
+.resource h1{
+    color: #196b56;
+}
+
+.resource h2{
+    font-size: large;
+}
+
+.resource a{
+    text-decoration: underline;
+}
+
+.resource-top-line{
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+#encryption-cat{
+    max-width: 300px;
+}
+
+.resource-table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin: 3em 0px;
+}
+
+/* .resource-table, */
+.resource-table th,
+.resource-table tr,
+.resource-table td
+{
+    border: 1px solid black;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+#email-screenshot{
+    max-width: 95%;
+      height: auto;
+    margin: 2em;
+}
+
+#postcard{
+    max-width: 400px;
+    margin-top: 1em;
+}
+
+.contro-h4{
+    margin-bottom: 0;
+}
+
+.contro-p{
+    margin-top: 0;
+}
+
+.section-jump{
+    font-size: small;
+}
+
+/* =====================
+   Resource
+   Encryption Explained
+   ===================== */
+
+#encryption-explained{
+    max-width: 90%;
+    height: auto;
+}
 
 /* =====================
    Contact

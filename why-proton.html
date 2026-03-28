@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RowanTree Security & Privacy</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+</head>
+
+<body>
+
+    <nav>
+    <div class="nav-logo">
+        <img src="img/luis-green.jpg" id="rowan-leaf">
+      RowanTree Security & Privacy
+    </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <span></span><span></span><span></span>
+    </label>
+    <ul class="menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="trainings.html">Trainings</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li ><a href="schedule.html" id="button-book">Book a Consult</a></li>
+    </ul>
+
+  </nav>
+
+   
+ <header>
+    <!-- <p>Cybersecurity with compassion</p> -->
+
+
+    <!-- Wavy bottom edge -->
+    <div class="wave-bottom">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+         <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F9FAFB"/>
+        
+      </svg>
+    </div>
+  </header>
+
+  <div class="center-box">
+  <div class="resource">
+
+    <h1>Why I (still) use Proton</h1>
+    <h2>An introduction to "secure" email that addresses some controversy </h2>
+
+    <div class="resource-top-line">
+        <p>🗓️ March 7, 2026</p>
+        <p>👩‍💻 Izebel, RowanTree Security</p>
+        <p>⏱︎  10 min read</p>
+        <!-- <p>🔗 Share</p> -->
+    </div>
+
+
+    <p>Earlier this week my Proton subscription renewed. On Thursday, 404 Media posted an <a target="_blank" href="https://www.404media.co/proton-mail-helped-fbi-unmask-anonymous-stop-cop-city-protestor/">article</a> with the headline "Proton Mail Helped FBI Unmask Anonymous ‘Stop Cop City’ Protester." </p>
+
+    <p>This isn't the first time Proton - a company marketing itself as privacy-forward - has ended up in the headlines. Nor is it the first time folks are questioning how safe Proton really is. </p>
+
+    <p>As a security professional, my answer is: It depends on what you're trying to protect, who you're trying to protect it from, and if you are using the right options to set up and access Proton for your situation. No email provider can overcome the fundamental security and privacy limitations of email as a medium. What matters is understanding exactly what Proton Mail and other privacy-forward email providers protect, what they can't, and how to use these tools accordingly. </p>
+
+    <p>In spite of the recent controversy, I'm still a Proton subscriber. I'll explain here why I choose to trust Proton with my data, my clients' data, and the limits of that trust. I'll also explain some of the technical stuff I think a lot of people misunderstand about Proton Mail, and "private" email in general, so that you're better prepared to make an informed choice yourself.</p>
+
+    <br>
+
+    <h2>I use Proton because I value end-to-end encryption</h2>
+
+    <p>The number one reason I am a Proton user is that it is the most widely used email provider that does <a target="_blank" href="encryption-explained.html">end-to-end encryption (E2EE)</a> on your message contents by default. E2EE means that only you and your recipient can read your messages; not hackers, not Proton, not a government served with a legal demand. That last part is what makes it meaningfully different from "encrypted" email in the general sense, and why it matters which provider you choose. </p>
+
+    <p>When email isn't E2EE, as with Gmail, or Yahoo, or really any "normal" email provider, not only is the company running your email service probably selling your data to advertisers, they can decrypt your messages. In other words: they can read your email... And so can any government that serves them with a legal demand, or any hacker who manages to breach their servers.</p>
+
+    <p>But E2EE email only works automatically when both sender and recipient use the same provider. That's why popularity matters: if more people use Proton, more of your emails will be automatically protected. </p>
+
+    <a class="center-box" href="encryption-explained.html" target="_blank">
+        <img src="img/encrption-cat.png" id="encryption-cat" alt="a cartoon orange striped cat saying &quot; Click here to read more about how encryption works &quot;">
+    </a>
+
+    <p>Security and privacy doesn't begin and end with end-to-end encrypted message contents though - which I think is one of the fundamental misunderstandings of "private" email that I'd like to address.</p>
+    
+    <br>
+
+    <h2>Lots of data isn't guaranteed to stay private under all circumstances, and some data can't ever be private. </h2>
+
+    <p>There are some common misconceptions out there about the limits of E2EE email that are important for everyone to get right. Take a look: </p>
+
+    <div class="center-box">
+        <img id="email-screenshot" src="img/email-screenshot.png" alt="Screenshot of a sample received email, annotated to illustrate the limits of end-to-end encryption. Red lock icons label unencrypted metadata fields — subject line, sender address and IP, recipient address, and timestamp — while a green lock icon indicates the email body contents are E2EE.">
+    </div>
+
+    <p>Again, when using an E2EE email provider, your email message contents are <em>automatically</em> E2EE <em>only when sent to and from the same provider.</em>Only Proton to/from Proton emails are automatically E2EE. Only Tuta to/from Tuta emails are automatically E2EE. If you send Proton to Tuta, or vice versa, it's not E2EE. If you send Proton to Gmail, or Yahoo, or any other email provider, it's not E2EE.</p>
+
+
+
+    <p>It <em>is</em> possible to achieve E2EE with different providers if you take additional steps. For example: Exchanging <a target="_blank" href="https://www.maketecheasier.com/pgp-encryption-how-it-works/">PGP keys</a>, or <a href="https://proton.me/blog/how-to-password-protect-email" target="_blank">setting a password</a> to view the email shared via a different communication channel, like <a href="https://signal.org/download/" target="_blank">Signal</a>. But that's tricky for most laypeople. I think creating a <a href="https://account.proton.me/mail/signup?ref=mailhero" target="_blank">free Proton Mail account</a> is much easier for the average person to understand, and maybe they're using Proton already since it is the most popular option out there. So with Proton, there are the greatest odds that my <em>message contents</em> will automatically be E2EE.</p>
+
+    <p id="para-w-1">Who I am emailing, the date and time, and most other metadata are not protected by any email provider.<a href="#footnote-1" aria-label="Footnote 1">¹</a></p>
+
+            <table class="resource-table center-box">
+        <tr>
+            <th>Type of Data</th>
+            <th>How Protected</th>
+        </tr>
+        <tr>
+            <td>Email contents</td>
+            <td>⚠️ Only E2EE w/ same provider - or extra steps</td>
+        </tr>
+        <tr>
+            <td>IP address</td>
+            <td>⚠️ Not always protected unless using Tor (or sometimes: a VPN) </td>
+        </tr>
+        <tr>
+            <td>Email addresses</td>
+            <td>⛔ Not protected</td>
+        </tr>
+        <tr>
+            <td>Most other metadata</td>
+            <td>⛔ Not protected</td>
+        </tr>
+        <tr>
+            <td>Payment data (if a paid account)</td>
+            <td>⛔ Not protected from legal action</td>
+        </tr>
+        <tr>
+            <td>Backup email</td>
+            <td>⛔ Not protected from legal action</td>
+        </tr>
+    </table>
+
+    <p>Your IP address is only protected under specific circumstances. An IP address is like a digital fingerprint for your internet connection. It's quietly captured by virtually every internet service you interact with. Your internet provider (or a government) can use your IP address to trace your online activity back to your physical location and identity. </p>
+        
+    <p>Your IP address is typically logged (at a minimum) by your email provider whenever you log into your account, as well as whenever you send an email. A <a target="_blank" href="https://www.maketecheasier.com/what-is-vpn-why-do-i-need-one/">VPN</a> or <a target="_blank" href="https://www.maketecheasier.com/what-is-vpn-why-do-i-need-one/">Tor</a> masks your actual IP address from the provider by routing your internet traffic through another computer managed by that service, somewhere else. That other computer's IP gets logged instead. But unfortunately, sometimes using a VPN isn't enough to protect high-risk users, and the VPN's IP can still be traced back to you.</p>
+
+    <p id="para-w-2">Your VPN provider is also a company that may be required to respond to legal action. Just like your email provider, the VPN company may also hold important data, like your actual IP address, payment data, name, etc. Some unethical VPN providers even sell your data to advertisers.<a href="#footnote-2" aria-label="Footnote 2">²</a> </p>
+
+    <p id="para-w-3">Using Proton Mail provides an extra layer of protection when it comes to protecting your IP address: When Proton recognizes that a VPN is in use, it doesn't log the IP address at all.<a href="#footnote-3" aria-label="Footnote 3">³</a> So if the Swiss government demands that Proton turn over the IP address associated  with an account, Proton doesn't have anything to share. </p>
+
+
+    <div class="center-box">
+        <img src="img/postcard.png" id="postcard" alt="An image of a postcard. The message is written in code, with a lock icon in the background. The names of the sender and recipient, as well as the recipient's address are not.">
+    </div>
+    
+
+    <p>If you're reading this and beginning to think something like, <i>"Wow, that's a lot of data that's not protected without a lot of extra work... or at all..."</i> - you would be correct. Security folks like me like to say that sending an email is like sending a postcard.</p>
+
+    <p>Sending email Proton to Proton, or Tuta to Tuta, is like sending a postcard where the message is written in a code that's impossible for someone else to decipher - as long as your encryption keys are a secret. The message still needs to get to its destination, so who the postcard is sent to, can't be in code. Other metadata, like the timestamp (the postmark if you will) also can't be in code - it's relying on other internet infrastructure that the email provider can't do anything about.</p>
+
+    <!-- <p>Even if you're not worried about getting in trouble with a government, many security and privacy conscious people avoid sending sensitive personal information via email entirely.</p> -->
+
+    <br>
+
+    <h2>Why this matters when a government is an adversary</h2>
+
+    <p id="para-w-4">All software companies are subject to the laws of the countries they are based in - including Proton, which has to follow Switzerland's laws. Swiss law is a bit more privacy respecting than US law, but international treaties can sometimes force the Swiss government to force Proton to turn over data about your account. That data can include:</p>
+
+    <ul>
+        <li>Anything that is not E2EE about your emails to other ProtonMail users (all that metadata including subject, attachment names, recipients, timestamps, etc.)</li>
+        <li>Any emails that are not E2EE, including message contents - so any emails sent to/from other email providers (like Google, Yahoo, Tuta, etc.)</li>
+        <li>Any account information, including who the name the account is registered to, payment info if you didn't pay cash, the registered recovery email address etc. </li>
+        <li>The IP address you connect to Proton from - if Proton is legally ordered to log the IP, and you are not using a VPN or Tor. </li>
+    </ul>
+
+    <p>Unlike companies like Meta, or Google, Proton tries to minimize the number of legal requests they comply with, and rejects more of the nonsensical ones<a href="#footnote-4" aria-label="Footnote 4">⁴</a>, but there will always be some risk of potentially sensitive data becoming available under certain circumstances. If that's you, proceed accordingly: Take advantage of tactics that would allow you to obscure your identity, or communicate via a different method.</p>
+
+    <br>
+
+    <h2>Why else do I use Proton</h2>
+
+    <p>The ease of setting up a free ProtonMail account, and the brand familiarity, mean that if someone wants their message to be E2EE when reaching out to me for the first time and they're not already using Proton, that's not intimidating, or technically difficult. </p>
+
+    <p>In addition to being the most widely accepted option for E2EE email out there, the ProtonMail user interface is clean and user-friendly, it's easy to set up with a custom domain, and I appreciate that I get a bunch of <a href="https://proton.me/support/creating-aliases" target="_blank">email aliases</a> with my plan that are easy to set up and dispose of. </p>
+
+    <p>Proton Suite also comes along with my plan and includes Proton Drive, Proton Docs and Proton Sheets, which are all E2EE. Since I often handle sensitive information, I prefer for as much of my data as possible to be E2EE, so I avoid using Google. I also use CryptPad in some cases, but prefer Proton's UI, and find it easier to use their spreadsheets. (CryptPad is more like old school Microsoft Word, and does occasionally have text formatting options that I find useful, but Proton seems to handle more users on collaborative docs a bit better, and is more mobile friendly.) </p>
+
+    <p>I also haven't yet found the controversies over Proton to be worth leaving their software over. I'll talk about the three biggest ones I'm aware of:</p>
+
+    <br>
+
+    <h2>The controversies</h2>
+
+    <h4 class="contro-h4">"Proton Mail Helped FBI Unmask Anonymous ‘Stop Cop City’ Protester"</h4>
+    <p class="contro-p"><i>Headline from <a target="_blank" href="https://www.404media.co/proton-mail-helped-fbi-unmask-anonymous-stop-cop-city-protestor/">404 Media</a>, March 2026</i></p>
+
+    <p>To summarize the most recent controversy: An activist involved in Stop Cop City paid for a Proton account using their credit card. Then a cop was killed somehow in connection to Stop Cop City, and the FBI got very motivated. The FBI told the Swiss government they wanted data related to the Proton account which was publicly associated with Stop Cop City. Because the US has some treaties with the Swiss, the Swiss authorities legally demanded under Swiss law that Proton hand over the data associated with the account in question. Since the demand was legally valid, Proton turned over data that included the activists payment info, and thus identity to the Swiss government, who then passed it to the FBI. </p>
+
+    <p>There are a couple important takeaways here: </p>
+
+    <ul>
+        <li><p>Again, whatever software you use, and whatever data that company touches as a result of you using their software, that company has to comply with the laws of the country it operates under. That goes for anyone. Proton explicitly discusses this in section 5 of their <a target="_blank" href="https://proton.me/legal/privacy">privacy policy</a>.</p>
+
+        <p>In my opinion, Proton is still a much better option that using Google, for example, because:</p>
+
+        <ul>
+            <li>As a result of E2EE, the company has much less meaningful data to hand over</li>
+            <li>By Proton being based in Switzerland, international legal requests are required for the US government to get your data. That's a whole lot of paperwork and some expense to go through, so it tends to not happen super frequently.</li>
+            <li>Unlike Meta and Google, Proton has a much better track record of only complying with the legal requests they absolutely have to. </li>
+        </ul>
+        </li>
+
+        <li>Proton allows you to pay by sending them <a target="_blank" href="https://proton.me/support/payment-options#cash">cash</a> in the mail. If the activist had chosen this option, or set up a free anonymous account, there wouldn't have been credit card info available to hand to any legal authority. (You can also pay with Bitcoin (via Monero if you can sort that out), but I think cash is the safest and easiest option.) </li>
+    </ul>
+
+    <br>
+
+    <h4 class="contro-h4">"ProtonMail logged IP address of French activist after order by Swiss authorities"</h4>
+
+    <p class="contro-p"><i>Headline from <a target="_blank" href="https://techcrunch.com/2021/09/06/protonmail-logged-ip-address-of-french-activist-after-order-by-swiss-authorities/">TechCrunch</a>, September 2021. More on this case, and some technical explanations from <a target="_blank" href="https://arstechnica.com/information-technology/2021/09/privacy-focused-protonmail-provided-a-users-ip-address-to-authorities/">ArsTechnica</a>. Proton's response <a target="_blank" href="https://proton.me/blog/climate-activist-arrest">here</a>.</i></p>
+
+    <p>In this case, Proton was forced by Swiss legal authorities to log the IP address of a French climate activist, and hand that over to the Swiss government, who shared that data with the French. </p>
+
+    <p>Proton does not regularly log IP addresses for every account holder; at the time, Proton's privacy policy stated that IP addresses would only be logged when forced by legal action under extreme circumstances. That this activist posed such extreme risk to merit this action seems unlikely... but that's up to French and Swiss authorities; it's unlikely that Proton had details about the case. However, I think there's a reasonable argument that Proton's marketing language in use at the time about being an "anonymous" email service was misleading. </p>
+
+    <p>Additionally concerning, Proton did not alert the activist that the monitoring was happening for eight months. Proton's policy at the time stated that a user would "be notified if a third party makes a request for their private data and such data is to be used in a criminal proceeding” but also that “in certain circumstances” notification “can be delayed." It seems very likely that a gag order was in place that prevented Proton from alerting the activist, and Proton's policy did state that the situation that occurred was a possibility... But maybe it can be argued that this was overshadowed by marketing language. This is why I actually read software privacy policies, and/or use tools like <a target="_blank" href="https://tosdr.org/en">tosdr.org</a> that help me understand them.</p>
+
+    <p>Logging the IP address would have been impossible if the activist had been using a <a target="_blank" href="https://www.maketecheasier.com/what-is-vpn-why-do-i-need-one/">VPN</a> or <a target="_blank" href="https://www.maketecheasier.com/what-is-vpn-why-do-i-need-one/">Tor</a>- which was also explicit in Proton's policies at the time. </p>
+
+    <p>In the aftermath of this case going public, Proton made information about accessing their services more visible on their website, and expressed concern about legal overreach.</p>
+
+    <p>Here are my key takeaways: </p>
+
+    <ul>
+        <li>Again: Whatever software you use, and whatever data that company touches as a result of you using their software, that company has to comply with the laws of the country it operates under.</li>
+        <li>If it's important to you to be anonymous when using Proton services, use <a target="_blank" href="https://www.maketecheasier.com/what-is-vpn-why-do-i-need-one/">Tor</a>. </li>
+        <li>Read privacy policies and terms of service. They matter more than marketing language. (I think Proton does a good job of making theirs understandable.) </li>
+    </ul>
+    <br>
+
+    <h4 class="contro-h4">Andy Yen supposedly supports Trump</h4>
+
+    <p>Last year, an assertion that Proton's CEO, Andy Yen, is a Trump supporter went viral. This would be pretty disappointing if it were true, but I'm not so sure that it is. <a target="_blank" href="https://medium.com/@ovenplayer/does-proton-really-support-trump-a-deeper-analysis-and-surprising-findings-aed4fee4305e  ">This article</a> by ovenplayer explains why.</p>
+
+    <br>
+
+    <h2>Email still sucks for privacy and security, so avoid it when possible, and use a privacy-centered provider when you can't </h2>
+
+    <p>Even though I still like and use Proton, I'm very cautious about what I send over email. Instead, I discuss sensitive topics (and my day to day activities) and share sensitive files (like my tax documents) over Signal. I'll also share files from my Proton Drive to other specific Proton Drive users, and set a password. But, email is the default mode of communication in a lot of instances, so if I have to use something, for the moment, I'm using ProtonMail. I do not use a non-disposable email address for activities where my safety depends on being anonymous. </p>
+
+    <p>Email has always been a compromised medium for privacy, and no email provider - not Proton, not anyone - can change its fundamental architecture. What Proton can do, and largely does, is minimize what data they hold, minimize what they comply with, and build tools that put meaningful amount of power in your hands - but it's on you to use them correctly and consistently. </p>
+
+    <p>In my opinion, the recent headlines aren't reasons to leave Proton. They're reminders of something security professionals have always known: your threat model matters more than your tools. If you're a target of a motivated government, no email service alone will save you. Use Signal. Use Tor. Pay cash. Don't tie your identity to your accounts.</p>
+
+    <p>For the vast majority of people who want better privacy than Google offers without sacrificing usability, Proton remains a solid, practical choice. Just go in with clear eyes about what it can and can't protect, and act accordingly.</p>
+
+    <br>
+
+    <h2>For more help and training</h2>
+
+    <p>If you'd like to set up a training for your org on the basics of email security, or if you'd like to discuss how email fits into your security plan, please <a href="contact.html">get in touch!</a></p>
+
+    <br>
+
+    <h4>Footnotes:</h4>
+
+    <p id="footnote-1">¹ I received a correction after writing informing me that Tuta is able to <a target="_blank" href="https://tuta.com/encryption">encrypt the subject line</a> of emails, as well as the email recipient name (though not email addresses) as a result of their proprietary encryption architecture.</p>
+
+    <p>That page also notes that Tuta Mail "lets you send end-to-end encrypted emails to anyone regardless of the email provider that they use" - however that functionality is <a target="_blank" href="https://proton.me/support/password-protected-emails">also available in ProtonMail</a> - in both cases it takes extra steps, but I will admit the way Tuta implements it is cooler / better. 
+
+        <a href="#para-w-1" class="section-jump" aria-label="Return to section referenced">⏎</a>
+
+    </p>
+
+    <p id="footnote-2">² If you have privacy concerns, use a VPN provider that's actually good, and pay cash or anon crypto. I usually recommend <a href="https://mullvad.net/en" target="_blank">Mullvad</a>, but I think Proton's is perfectly adequate for the average person. Tor is the safest option, since it routes your traffic through multiple relays rather than a single provider you have to trust. 
+
+        <a href="#para-w-2" class="section-jump" aria-label="Return to section referenced">⏎</a>
+
+    </p>
+
+    <p id="footnote-3">³ This is explained in clear language in Proton's <a target="_blank" href="https://proton.me/mail/privacy-policy">Privacy Policy</a>
+
+        <a href="#para-w-3" class="section-jump" aria-label="Return to section referenced">⏎</a>
+
+    </p>
+
+    <p id="footnote-4">⁴ You can read more about the legal requests Proton responds to or rejects in their <a target="_blank" href="https://proton.me/legal/transparency">transparency report</a>. 
+
+        <a href="#para-w-4" class="section-jump" aria-label="Return to section referenced">⏎</a>
+
+    </p>
+
+  </div>
+</div>
+ 
+
+      <footer>
+        <!-- Wavy top edge -->
+        <div class="wave-top">
+            <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0,40 C360,0 1080,80 1440,40 L1440,0 L0,0 Z" fill="#F9FAFB"/>
+            </svg>
+        </div>
+
+        <p>🏳️‍🌈 Support Digital Security as Community Care:</p>
+        <a target="_blank" href="https://buymeacoffee.com/rowantree">
+            <button id="button-coffee">Buy Me a Coffee ☕</button>
+        </a>
+        <br>
+        <p>© <script>document.write(new Date().getFullYear())</script> RowanTree Security and Privacy</p>
+    </footer>
+
+
+</body>
+
+</html>
