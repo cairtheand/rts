@@ -364,6 +364,10 @@ section p {
    library.html
    ===================== */
 
+#header-container-library{
+    max-width:550px;
+}
+
 .resource-card{
     border-radius: 12px;        
     padding: 0px 20px 30px 20px;   
@@ -394,14 +398,12 @@ section p {
     height: 100px;
 }
 
-#card-box{
+.card-box{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     /* width: 800px; */
-
-
 }
 
 
